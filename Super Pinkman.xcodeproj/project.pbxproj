@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		913908971CEB94F100C5CF52 /* highscore.caf in Resources */ = {isa = PBXBuildFile; fileRef = 913908961CEB94F100C5CF52 /* highscore.caf */; };
+		913908991CEB95F200C5CF52 /* big_bang.caf in Resources */ = {isa = PBXBuildFile; fileRef = 913908981CEB95F200C5CF52 /* big_bang.caf */; };
+		9141BD961CEC519900F58B88 /* stamp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9141BD951CEC519900F58B88 /* stamp.caf */; };
+		9179F4641CE9E3A900166192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179F4631CE9E3A900166192 /* AppDelegate.swift */; };
+		9179F46A1CE9E3A900166192 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179F4691CE9E3A900166192 /* GameViewController.swift */; };
+		9179F46D1CE9E3A900166192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9179F46B1CE9E3A900166192 /* Main.storyboard */; };
+		9179F4721CE9E3A900166192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9179F4701CE9E3A900166192 /* LaunchScreen.storyboard */; };
+		9179F47A1CE9EA9600166192 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179F4791CE9EA9600166192 /* GameScene.swift */; };
+		9179F47C1CEA01FE00166192 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9179F47B1CEA01FE00166192 /* Extensions.swift */; };
+		9179F4961CEA290700166192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9179F4951CEA290700166192 /* Assets.xcassets */; };
+		918D66701CEC7F0A00F7763A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918D666F1CEC7F0A00F7763A /* GoogleMobileAds.framework */; };
+		918E44B51CEB26FC0012F3B0 /* select.caf in Resources */ = {isa = PBXBuildFile; fileRef = 918E44B41CEB26FC0012F3B0 /* select.caf */; };
+		918E44B71CEB27070012F3B0 /* Victory_intro.caf in Resources */ = {isa = PBXBuildFile; fileRef = 918E44B61CEB27070012F3B0 /* Victory_intro.caf */; };
+		918E44B91CEB27110012F3B0 /* Victory_loop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 918E44B81CEB27110012F3B0 /* Victory_loop.caf */; };
+		918E44BB1CEB46310012F3B0 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = 918E44BA1CEB46310012F3B0 /* explosion.caf */; };
+		918E44BD1CEB52B40012F3B0 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918E44BC1CEB52B40012F3B0 /* AppData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		913908961CEB94F100C5CF52 /* highscore.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = highscore.caf; path = Audio/highscore.caf; sourceTree = "<group>"; };
+		913908981CEB95F200C5CF52 /* big_bang.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = big_bang.caf; path = Audio/big_bang.caf; sourceTree = "<group>"; };
+		9141BD951CEC519900F58B88 /* stamp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stamp.caf; path = Audio/stamp.caf; sourceTree = "<group>"; };
+		9179F4601CE9E3A800166192 /* Super Pinkman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Pinkman.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9179F4631CE9E3A900166192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9179F4691CE9E3A900166192 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9179F46C1CE9E3A900166192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9179F4711CE9E3A900166192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9179F4731CE9E3A900166192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9179F4791CE9EA9600166192 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		9179F47B1CEA01FE00166192 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9179F4951CEA290700166192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		918D666F1CEC7F0A00F7763A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		918E44B41CEB26FC0012F3B0 /* select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = select.caf; path = Audio/select.caf; sourceTree = "<group>"; };
+		918E44B61CEB27070012F3B0 /* Victory_intro.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Victory_intro.caf; path = Audio/Victory_intro.caf; sourceTree = "<group>"; };
+		918E44B81CEB27110012F3B0 /* Victory_loop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Victory_loop.caf; path = Audio/Victory_loop.caf; sourceTree = "<group>"; };
+		918E44BA1CEB46310012F3B0 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion.caf; path = Audio/explosion.caf; sourceTree = "<group>"; };
+		918E44BC1CEB52B40012F3B0 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9179F45D1CE9E3A800166192 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918D66701CEC7F0A00F7763A /* GoogleMobileAds.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9179F4571CE9E3A800166192 = {
+			isa = PBXGroup;
+			children = (
+				918D666F1CEC7F0A00F7763A /* GoogleMobileAds.framework */,
+				9179F4621CE9E3A900166192 /* Arcade_Runner */,
+				9179F4611CE9E3A800166192 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9179F4611CE9E3A800166192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9179F4601CE9E3A800166192 /* Super Pinkman.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9179F4621CE9E3A900166192 /* Arcade_Runner */ = {
+			isa = PBXGroup;
+			children = (
+				9179F4731CE9E3A900166192 /* Info.plist */,
+				918E44BC1CEB52B40012F3B0 /* AppData.swift */,
+				9179F4631CE9E3A900166192 /* AppDelegate.swift */,
+				9179F47B1CEA01FE00166192 /* Extensions.swift */,
+				9179F4791CE9EA9600166192 /* GameScene.swift */,
+				9179F4691CE9E3A900166192 /* GameViewController.swift */,
+				9179F4951CEA290700166192 /* Assets.xcassets */,
+				9179F4881CEA1A6B00166192 /* Audio */,
+				9179F4701CE9E3A900166192 /* LaunchScreen.storyboard */,
+				9179F46B1CE9E3A900166192 /* Main.storyboard */,
+			);
+			path = Arcade_Runner;
+			sourceTree = "<group>";
+		};
+		9179F4881CEA1A6B00166192 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				9141BD951CEC519900F58B88 /* stamp.caf */,
+				913908981CEB95F200C5CF52 /* big_bang.caf */,
+				913908961CEB94F100C5CF52 /* highscore.caf */,
+				918E44BA1CEB46310012F3B0 /* explosion.caf */,
+				918E44B41CEB26FC0012F3B0 /* select.caf */,
+				918E44B61CEB27070012F3B0 /* Victory_intro.caf */,
+				918E44B81CEB27110012F3B0 /* Victory_loop.caf */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9179F45F1CE9E3A800166192 /* Super Pinkman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9179F4761CE9E3A900166192 /* Build configuration list for PBXNativeTarget "Super Pinkman" */;
+			buildPhases = (
+				9179F45C1CE9E3A800166192 /* Sources */,
+				9179F45D1CE9E3A800166192 /* Frameworks */,
+				9179F45E1CE9E3A800166192 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Super Pinkman";
+			productName = Arcade_Runner;
+			productReference = 9179F4601CE9E3A800166192 /* Super Pinkman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9179F4581CE9E3A800166192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = TERVAdev;
+				TargetAttributes = {
+					9179F45F1CE9E3A800166192 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FQTZRC88T5;
+					};
+				};
+			};
+			buildConfigurationList = 9179F45B1CE9E3A800166192 /* Build configuration list for PBXProject "Super Pinkman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9179F4571CE9E3A800166192;
+			productRefGroup = 9179F4611CE9E3A800166192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9179F45F1CE9E3A800166192 /* Super Pinkman */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9179F45E1CE9E3A800166192 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				913908991CEB95F200C5CF52 /* big_bang.caf in Resources */,
+				9179F4721CE9E3A900166192 /* LaunchScreen.storyboard in Resources */,
+				913908971CEB94F100C5CF52 /* highscore.caf in Resources */,
+				918E44BB1CEB46310012F3B0 /* explosion.caf in Resources */,
+				918E44B91CEB27110012F3B0 /* Victory_loop.caf in Resources */,
+				9179F46D1CE9E3A900166192 /* Main.storyboard in Resources */,
+				9179F4961CEA290700166192 /* Assets.xcassets in Resources */,
+				918E44B51CEB26FC0012F3B0 /* select.caf in Resources */,
+				9141BD961CEC519900F58B88 /* stamp.caf in Resources */,
+				918E44B71CEB27070012F3B0 /* Victory_intro.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9179F45C1CE9E3A800166192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9179F47A1CE9EA9600166192 /* GameScene.swift in Sources */,
+				9179F46A1CE9E3A900166192 /* GameViewController.swift in Sources */,
+				9179F4641CE9E3A900166192 /* AppDelegate.swift in Sources */,
+				9179F47C1CEA01FE00166192 /* Extensions.swift in Sources */,
+				918E44BD1CEB52B40012F3B0 /* AppData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9179F46B1CE9E3A900166192 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9179F46C1CE9E3A900166192 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9179F4701CE9E3A900166192 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9179F4711CE9E3A900166192 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9179F4741CE9E3A900166192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9179F4751CE9E3A900166192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9179F4771CE9E3A900166192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Arcade_Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TERVAdev.super-pinkman";
+				PRODUCT_NAME = "Super Pinkman";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		9179F4781CE9E3A900166192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Arcade_Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TERVAdev.super-pinkman";
+				PRODUCT_NAME = "Super Pinkman";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9179F45B1CE9E3A800166192 /* Build configuration list for PBXProject "Super Pinkman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9179F4741CE9E3A900166192 /* Debug */,
+				9179F4751CE9E3A900166192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9179F4761CE9E3A900166192 /* Build configuration list for PBXNativeTarget "Super Pinkman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9179F4771CE9E3A900166192 /* Debug */,
+				9179F4781CE9E3A900166192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9179F4581CE9E3A800166192 /* Project object */;
+}

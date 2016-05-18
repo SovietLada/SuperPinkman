@@ -8,46 +8,120 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  var screenX: CGFloat?
+  var screenY: CGFloat?
 
-        if let scene = GameScene(fileNamed:"GameScene") {
-            // Configure the view.
-            let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
-        }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    if AppData().isFirstRun() {
+      print("Hello, World!")
     }
 
-    override func shouldAutorotate() -> Bool {
-        return true
+    let skView = view as! SKView!
+    let scene = GameScene(size: skView.bounds.size)
+    screenX = skView.bounds.size.width
+    screenY = skView.bounds.size.height
+    // Configure the view.
+    skView.showsFPS = false
+    skView.showsNodeCount = false
+
+    /* Sprite Kit applies additional optimizations to improve rendering performance */
+    skView.ignoresSiblingOrder = true
+
+    /* Set the scale mode to scale to fit the window */
+    scene.scaleMode = .AspectFill
+
+    skView.presentScene(scene)
+
+    print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+    configureAds()
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(showOrHideAd), name: "gameStateChanged", object: nil)
+
+  }
+
+  override func shouldAutorotate() -> Bool {
+    return true
+  }
+
+  override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+    return UIInterfaceOrientationMask.Portrait
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Release any cached data, images, etc that aren't in use.
+  }
+
+  override func prefersStatusBarHidden() -> Bool {
+    return true
+  }
+
+  // MARK: Ads
+
+  var ad = GADBannerView(adSize: kGADAdSizeBanner)
+
+  func configureAds() {
+
+    ad.adSize = kGADAdSizeSmartBannerPortrait
+    ad.adUnitID = "ca-app-pub-4278039687570537/7469043802"
+    ad.rootViewController = self
+
+    view.addSubview(ad)
+
+    let request = GADRequest()
+    request.testDevices = ["71e71c5b05140361ce08615b32a3108b", "1de1e935d87e64aefb2c5d601e550488", "fd8607d046c450e17ec901c92795ea79", kGADSimulatorID]
+    ad.loadRequest(request)
+
+  }
+
+  func showOrHideAd() {
+
+    if ad.hidden {
+      configureAds()
+      ad.hidden = false
+    }
+    else {
+      ad.hidden = true
     }
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
-    }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
+  /// Tells the delegate an ad request loaded an ad.
+  func adViewDidReceiveAd(bannerView: GADBannerView!) {
+    print("adViewDidReceiveAd")
+  }
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+  /// Tells the delegate an ad request failed.
+  func adView(bannerView: GADBannerView!,
+              didFailToReceiveAdWithError error: GADRequestError!) {
+    print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+  }
+
+  /// Tells the delegate that a full screen view will be presented in response
+  /// to the user clicking on an ad.
+  func adViewWillPresentScreen(bannerView: GADBannerView!) {
+    print("adViewWillPresentScreen")
+  }
+
+  /// Tells the delegate that the full screen view will be dismissed.
+  func adViewWillDismissScreen(bannerView: GADBannerView!) {
+    print("adViewWillDismissScreen")
+  }
+
+  /// Tells the delegate that the full screen view has been dismissed.
+  func adViewDidDismissScreen(bannerView: GADBannerView!) {
+    print("adViewDidDismissScreen")
+  }
+
+  /// Tells the delegate that a user click will open another app (such as
+  /// the App Store), backgrounding the current app.
+  func adViewWillLeaveApplication(bannerView: GADBannerView!) {
+    print("adViewWillLeaveApplication")
+  }
+
 }
