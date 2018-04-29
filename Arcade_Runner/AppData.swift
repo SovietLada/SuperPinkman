@@ -10,7 +10,7 @@
 
 import Foundation
 
-let userDefaults = NSUserDefaults.standardUserDefaults()
+let userDefaults = UserDefaults.standard
 
 class AppData {
 
@@ -22,11 +22,11 @@ class AppData {
 
   func isFirstRun() -> Bool {
 
-    if userDefaults.integerForKey("hasStarted") == 42 {
+    if userDefaults.integer(forKey: "hasStarted") == 42 {
       setStartups(getStartups() + 1)
       return false
     }
-    userDefaults.setInteger(42, forKey: "hasStarted")
+    userDefaults.set(42, forKey: "hasStarted")
 
     // Set initial values for user defaults.
     setStartups(1)
@@ -37,38 +37,38 @@ class AppData {
 
   }
 
-  func setStartups(startups: Int) {
+  func setStartups(_ startups: Int) {
 
-    userDefaults.setInteger(startups, forKey: "startups")
+    userDefaults.set(startups, forKey: "startups")
     synchronize()
 
   }
 
   func getStartups() -> Int {
 
-    return userDefaults.integerForKey("startups")
+    return userDefaults.integer(forKey: "startups")
 
   }
 
-  func setHighscore(score: Int) {
+  func setHighscore(_ score: Int) {
 
-    userDefaults.setInteger(score, forKey: "highscore")
+    userDefaults.set(score, forKey: "highscore")
     synchronize()
 
   }
 
   func getHighscore() -> Int {
 
-    return userDefaults.integerForKey("highscore")
+    return userDefaults.integer(forKey: "highscore")
 
   }
 
-  func setMute(bool: Bool) {
-    userDefaults.setBool(bool, forKey: "mute")
+  func setMute(_ bool: Bool) {
+    userDefaults.set(bool, forKey: "mute")
   }
 
   func getMute() -> Bool {
-    return userDefaults.boolForKey("mute")
+    return userDefaults.bool(forKey: "mute")
   }
   
 }

@@ -9,53 +9,6 @@
 import Foundation
 import UIKit
 
-// MARK: Dictionary extensions
-
-extension Dictionary {
-
-  // This is mostly boilerplate code that you’ll find in any app that deals with JSON files.
-  static func loadJSONFromBundle(filename: String) -> Dictionary<String, AnyObject>? {
-
-    if let path = NSBundle.mainBundle().pathForResource(filename, ofType: "json") {
-      var error: NSError?
-      let data: NSData?
-      do {
-        data = try NSData(contentsOfFile: path, options: NSDataReadingOptions())
-      } catch let error1 as NSError {
-        error = error1
-        data = nil
-      }
-
-      if let data = data {
-        let dictionary: AnyObject?
-        do {
-          dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions())
-        } catch let error1 as NSError {
-          error = error1
-          dictionary = nil
-        }
-        if let dictionary = dictionary as? Dictionary<String, AnyObject> {
-          return dictionary
-        }
-        else {
-          print("Level file '\(filename)' is not valid JSON: \(error!)")
-          return nil
-        }
-      }
-      else {
-        print("Could not load file: \(filename), error: \(error!)")
-        return nil
-      }
-    }
-    else {
-      print("Could not find file: \(filename)")
-      return nil
-    }
-
-  }
-
-}
-
 // MARK: String extensions
 
 extension String {
@@ -81,7 +34,7 @@ extension Float {
 
    @return Float - median value.
    */
-  static func median(ints: [Int]) -> Float {
+  static func median(_ ints: [Int]) -> Float {
 
     if ints.count % 2 == 0 {
       let a = ints[Int(ints.count / 2) - 1]; let b = ints[Int(ints.count / 2)]; let c = ((Float(a) + Float(b)) / 2)
@@ -98,7 +51,7 @@ extension Float {
 
    @return Float - mean value.
    */
-  static func mean(ints: [Int]) -> Float {
+  static func mean(_ ints: [Int]) -> Float {
 
     var sum = 0
     for var i in ints {
@@ -133,7 +86,7 @@ extension Int {
 
    @return Int - factorial value.
    */
-  static func factorial(i: Int) -> Int {
+  static func factorial(_ i: Int) -> Int {
 
     if i <= 1 {
       return 1
@@ -149,7 +102,7 @@ extension Int {
 
    @return Int - min value.
    */
-  static func minValue(ints: [Int]) -> Int {
+  static func minValue(_ ints: [Int]) -> Int {
 
     var a = Int.max
     for var i in 0...ints.count - 1 {
@@ -168,7 +121,7 @@ extension Int {
 
    @return Int - max value.
    */
-  static func maxValue(ints: [Int]) -> Int {
+  static func maxValue(_ ints: [Int]) -> Int {
 
     var a = Int.min
     for var i in 0...ints.count - 1 {
@@ -187,16 +140,16 @@ extension Int {
 
    @return Int - random value.
    */
-  static func random(range: Range<Int>) -> Int {
+  static func random(_ range: Range<Int>) -> Int {
 
     var offset = 0
 
-    if range.startIndex < 0 { // Allows negative values for range
-      offset = abs(range.startIndex)
+    if range.lowerBound < 0 { // Allows negative values for range
+      offset = abs(range.lowerBound)
     }
 
-    let min = UInt32(range.startIndex + offset)
-    let max = UInt32(range.endIndex   + offset)
+    let min = UInt32(range.lowerBound + offset)
+    let max = UInt32(range.upperBound   + offset)
 
     return Int(min + arc4random_uniform(max - min)) - offset
 
@@ -211,21 +164,24 @@ extension UIColor {
   static func randomFoodColour() -> UIColor {
 
     let colours = [orangePeelColour(), yellowLemonColour(), orangeTomatoColour(), brownChocolateColour(), greenOliveColour()]
-    return colours[Int.random(0...colours.count - 1)]
+    let r: Range<Int> = 0..<colours.count
+    return colours[Int.random(r)]
 
   }
 
   static func randomMetalColour() -> UIColor {
 
     let colours = [greyDimColour(), greySilverColour(), greyLightSlateColour(), whiteIvoryColour(), blueLightSteelColour()]
-    return colours[Int.random(0...colours.count - 1)]
+    let r: Range<Int> = 0..<colours.count
+    return colours[Int.random(r)]
 
   }
 
   static func randomBackgroundColour() -> UIColor {
 
     let colours = [redBrickColour(), brownSaddleColour(), greenOliveColour(), greyDimColour()]
-    return colours[Int.random(0...colours.count - 1)]
+    let r: Range<Int> = 0..<colours.count
+    return colours[Int.random(r)]
 
   }
 

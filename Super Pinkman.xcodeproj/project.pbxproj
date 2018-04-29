@@ -139,6 +139,7 @@
 					9179F45F1CE9E3A800166192 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FQTZRC88T5;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -317,6 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TERVAdev.super-pinkman";
 				PRODUCT_NAME = "Super Pinkman";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -337,6 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TERVAdev.super-pinkman";
 				PRODUCT_NAME = "Super Pinkman";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
